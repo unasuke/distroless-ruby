@@ -1,4 +1,4 @@
-FROM ruby:2.5.7-slim-stretch as ruby
+FROM ruby:2.6.5-slim-stretch as ruby
 FROM gcr.io/distroless/base
 
 COPY --from=ruby /lib/x86_64-linux-gnu/libz.so.* /lib/x86_64-linux-gnu/
