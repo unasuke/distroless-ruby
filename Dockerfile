@@ -1,4 +1,4 @@
-FROM ruby:2.7.0-buster as ruby
+FROM ruby:3.0.0-buster as ruby
 
 ADD https://github.com/coord-e/magicpak/releases/latest/download/magicpak-x86_64-unknown-linux-musl /usr/bin/magicpak
 RUN chmod +x /usr/bin/magicpak
