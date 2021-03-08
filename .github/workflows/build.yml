@@ -1,0 +1,18 @@
+on: push
+jobs:
+  build:
+    strategy:
+      matrix:
+        ruby: ["2.5", "2.6", "2.7", "3.0"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/build-push-action@v1
+        with:
+          context: ${{ matrix.ruby }}/
+          tags: ${{ matrix.ruby }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: unasuke/distroless-ruby/distroless-ruby
+          tag_with_ref: true
