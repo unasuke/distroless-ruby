@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker/build-push-action@v1
         with:
-          context: ${{ matrix.ruby }}/
+          path: ${{ matrix.ruby }}/
           tags: ${{ matrix.ruby }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
