@@ -1,5 +1,7 @@
 FROM ruby:2.5.8-stretch as ruby
 
+LABEL org.opencontainers.image.source=https://github.com/unasuke/distroless-ruby
+
 ADD https://github.com/coord-e/magicpak/releases/latest/download/magicpak-x86_64-unknown-linux-musl /usr/bin/magicpak
 RUN chmod +x /usr/bin/magicpak
 RUN /usr/bin/magicpak -v $(which ruby) /bundle
