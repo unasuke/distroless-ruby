@@ -9,6 +9,7 @@ FROM gcr.io/distroless/base-debian10
 COPY --from=ruby /bundle /.
 COPY --from=ruby /usr/lib/x86_64-linux-gnu/libyaml* /usr/lib/x86_64-linux-gnu/
 COPY --from=ruby /usr/local/bin/ /usr/local/bin
+COPY --from=ruby /usr/local/include/ /usr/local/include
 COPY --from=ruby /usr/local/lib/ruby/ /usr/local/lib/ruby
 
 CMD ["/usr/local/bin/ruby", "-v"]
