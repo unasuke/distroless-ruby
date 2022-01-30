@@ -1,5 +1,12 @@
 # distroless-ruby
 
+## :warning: non-active
+**This repository is outdated.**
+
+Plese follow this repository.
+
+<https://github.com/unasuke/distroless>
+
 ## build and run
 
 ```shell
