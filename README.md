@@ -3,7 +3,7 @@
 ## :warning: non-active
 **This repository is outdated.**
 
-Plese follow this repository.
+Please follow this repository.
 
 <https://github.com/unasuke/distroless>
 
